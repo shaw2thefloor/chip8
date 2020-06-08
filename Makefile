@@ -1,8 +1,3 @@
-#
-# This is an example Makefile for a countwords program.  This
-# program uses both the scanner module and a counter module.
-# Typing 'make' or 'make count' will create the executable file.
-#
 
 # define some Makefile variables for the compiler and compiler flags
 # to use Makefile variables later in the Makefile: $()
@@ -21,19 +16,15 @@ CFLAGS  = -g -Wall
 #
 default: emu
 
-# To create the executable file count we need the object files
+# build executable from *.o files
 emu:  emu.o chip8.o 
 	$(CC) $(CFLAGS) -o emu emu.o chip8.o 
 
-# To create the object file countwords.o, we need the source
-# files countwords.c, scanner.h, and counter.h:
-#
+# compile .o file for chip8.c
 chip8.0:  chip8.c
 	$(CC) $(CFLAGS) -c chip8.c
 
-# To create the object file counter.o, we need the source files
-# counter.c and counter.h:
-#
+# compile .o fore for emu.c including headers for chip8
 emu.o:  emu.c chip8.h
 	$(CC) $(CFLAGS) -c emu.c
 
