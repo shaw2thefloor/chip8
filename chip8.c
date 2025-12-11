@@ -25,8 +25,9 @@ void DisassembleChip8Op(uint8_t *codebuffer, int pc)
     printf("%04x %02x %02x ", pc, code[0], code[1]);    
     switch (firstnib)    
     {    
-        case 0x00: printf("0 not handled yet"); break;    
-        case 0x01: printf("1 not handled yet"); break;    
+        case 0x00:
+            break;
+        case 0x01: printf("1 still not handled yet"); break;    
         case 0x02: printf("2 not handled yet"); break;    
         case 0x03: printf("3 not handled yet"); break;    
         case 0x04: printf("4 not handled yet"); break;    

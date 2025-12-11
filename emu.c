@@ -9,6 +9,7 @@ int main (int argc, char**argv)
     FILE *f= fopen(argv[1], "rb");
     if (f==NULL)
     {
+
         printf("error: Couldn't open %s\n", argv[1]);
         exit(1);
     }
