@@ -31,7 +31,7 @@ void DisassembleChip8Op(uint8_t *codebuffer, int pc)
         case 0x02: printf("2 not handled yet"); break;    
         case 0x03: printf("3 also still not handled yet"); break;    
         case 0x04: printf("4 not handled yet"); break;    
-        case 0x05: printf("5 not handled yet"); break;    
+        case 0x05: printf("5 not fingled yet"); break;    
         case 0x06:    
             {    
                 uint8_t reg = code[0] & 0x0f;    
